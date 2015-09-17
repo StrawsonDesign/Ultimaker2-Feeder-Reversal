@@ -20,6 +20,6 @@ With the factory orientation of the motor each printer was only able to
 print at 3mm^3/s without errors or feeder skips. After the feeder reversal
 each printer was able to print at 9mm^3/s.
 
-Also note that this is with the stepper motor current set to 1450ma.
-I also have the feeder spring tension gauge set at the first 
-mark slightly below the very top.
+Also note that this is with the stepper motor current set to 1350ma.
+I also have the feeder spring tension gauge set all the way to the top. 
+Any extra tension seems to chew up the filament and cause jamming.
