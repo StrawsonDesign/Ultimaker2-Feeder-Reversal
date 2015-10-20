@@ -198,13 +198,13 @@
 #define MICROSTEP16 HIGH,HIGH
 
 // Microstep setting (Only functional when stepper driver microstep pins are connected to MCU.
-#define MICROSTEP_MODES {16,16,16,16,16} // [1,2,4,8,16]
+#define MICROSTEP_MODES {16,16,16,1,1} // [1,2,4,8,16]
 
 // Motor Current setting (Only functional when motor driver current ref pins are connected to a digital trimpot on supported boards)
 #define DIGIPOT_MOTOR_CURRENT {135,135,135,135,135} // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)
 
 // Default motor current for XY,Z,E in mA
-#define DEFAULT_PWM_MOTOR_CURRENT {1200, 1200, 1450}
+#define DEFAULT_PWM_MOTOR_CURRENT {1200, 1200, 1500}
 
 //===========================================================================
 //=============================Additional Features===========================
@@ -239,7 +239,7 @@
   #define EXTRUDER_ADVANCE_K .0
 
   #define D_FILAMENT 2.85
-  #define STEPS_MM_E 928 // 928 for new wheel, 836 for factory
+  #define STEPS_MM_E 58 //  836 from factory
   #define EXTRUTION_AREA (0.25 * D_FILAMENT * D_FILAMENT * 3.14159)
   #define STEPS_PER_CUBIC_MM_E (axis_steps_per_unit[E_AXIS]/ EXTRUTION_AREA)
 
