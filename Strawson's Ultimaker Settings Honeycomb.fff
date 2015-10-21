@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
-<profile name="Strawson's Ultimaker Settings" version="2015-09-14 17:06:01" app="S3D-Software 3.0.2">
-  <baseProfile></baseProfile>
+<profile name="Strawson's Ultimaker Settings Honeycomb" version="2015-10-20 13:39:42" app="S3D-Software 3.0.2">
+  <baseProfile>Strawson's Ultimaker Settings (modified)</baseProfile>
   <printMaterial></printMaterial>
   <printQuality></printQuality>
   <printExtruders></printExtruders>
   <extruder name="Primary Extruder">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.4</diameter>
-    <autoWidth>0</autoWidth>
-    <width>0.4</width>
-    <extrusionMultiplier>1.02</extrusionMultiplier>
+    <autoWidth>1</autoWidth>
+    <width>0.48</width>
+    <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>5</retractionDistance>
+    <retractionDistance>3</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>6000</retractionSpeed>
-    <useCoasting>1</useCoasting>
-    <coastingDistance>1.5</coastingDistance>
+    <retractionSpeed>1500</retractionSpeed>
+    <useCoasting>0</useCoasting>
+    <coastingDistance>0.5</coastingDistance>
     <useWipe>1</useWipe>
-    <wipeDistance>2</wipeDistance>
+    <wipeDistance>3</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.15</layerHeight>
+  <layerHeight>0.14</layerHeight>
   <topSolidLayers>7</topSolidLayers>
   <bottomSolidLayers>5</bottomSolidLayers>
   <perimeterOutlines>2</perimeterOutlines>
@@ -33,8 +33,8 @@
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>150</firstLayerHeightPercentage>
-  <firstLayerWidthPercentage>150</firstLayerWidthPercentage>
-  <firstLayerUnderspeed>0.2</firstLayerUnderspeed>
+  <firstLayerWidthPercentage>120</firstLayerWidthPercentage>
+  <firstLayerUnderspeed>0.35</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftLayers>2</raftLayers>
@@ -69,29 +69,21 @@
   <infillLayerInterval>1</infillLayerInterval>
   <infillAngles>0,120,-120</infillAngles>
   <overlapInfillAngles>0</overlapInfillAngles>
-  <generateSupport>0</generateSupport>
+  <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>20</supportInfillPercentage>
   <supportExtraInflation>0.5</supportExtraInflation>
   <denseSupportLayers>0</denseSupportLayers>
   <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
-  <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
+  <supportHorizontalPartOffset>0.5</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   <supportType>0</supportType>
   <supportGridSpacing>4</supportGridSpacing>
   <maxOverhangAngle>55</maxOverhangAngle>
   <supportAngles>45,-45</supportAngles>
-  <temperatureController name="Primary Extruder">
-    <temperatureNumber>0</temperatureNumber>
-    <isHeatedBed>0</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="215"/>
-  </temperatureController>
-  <temperatureController name="Heated Build Platform">
+  <temperatureController name="heated bed">
     <temperatureNumber>1</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <relayBetweenLayers>0</relayBetweenLayers>
@@ -99,8 +91,17 @@
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <setpoint layer="1" temperature="60"/>
   </temperatureController>
+  <temperatureController name="Primary Extruder">
+    <temperatureNumber>0</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="210"/>
+  </temperatureController>
   <fanSpeed>
-    <setpoint layer="1" speed="255"/>
+    <setpoint layer="1" speed="0"/>
+    <setpoint layer="2" speed="255"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>0</adjustSpeedForCooling>
@@ -112,7 +113,7 @@
   <increaseFanForBridging>0</increaseFanForBridging>
   <bridgingFanSpeed>45</bridgingFanSpeed>
   <use5D>1</use5D>
-  <relativeEdistances>0</relativeEdistances>
+  <relativeEdistances>1</relativeEdistances>
   <allowEaxisZeroing>1</allowEaxisZeroing>
   <independentExtruderAxes>0</independentExtruderAxes>
   <includeM10123>0</includeM10123>
@@ -120,7 +121,7 @@
   <applyToolheadOffsets>0</applyToolheadOffsets>
   <gcodeXoffset>0</gcodeXoffset>
   <gcodeYoffset>0</gcodeYoffset>
-  <gcodeZoffset>0.14</gcodeZoffset>
+  <gcodeZoffset>0.08</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
   <strokeXoverride>230</strokeXoverride>
@@ -142,7 +143,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M907 E1300; set extruder stepper current,G28 ; home all axes,G1 X3 Y5 F3000 ; bring extruder to the front,G92 E0 ; zero the extruded length,G1 Z12 ; lower,G1 E23 F300 ; purge nozzle quickly ,G1 E25 F30 ; purge nozzle slowly ,G92 E0 ; zero the extruded length again,G1 E-5.5 F400; retract,G1 X150 Z0  F9000 ; pull away filament,G1 X210  F9000 ; wipe,G1 Y20  F9000 ; wipe,G1 E-1 ; feed filament back,,G92 E-1.5 ; zero the extruded length again</startingGcode>
+  <startingGcode>; note G90 and M83 are actually called before this script,; absolute XY coordinates and relative extrusion,M907 E1500; set extruder stepper current,G28 ; home all axes,G1 X0 Y5 F9000 ; bring extruder to the front,G92 E0 ; zero the extruded length,G1 Z12 ; lower,G1 E22 F300 ; purge nozzle quickly ,G92 E0 ; zero the extruded length,G1 E10 F30 ; purge nozzle slowly ,G92 E0 ; zero the extruded length,G1 E-4 F400; retract,G1 X100  F9000 ; pull away filament,G1 X150 Z0  F9000 ; pull away filament,G1 X180  F9000 ; wipe,G1 Y20  F9000 ; wipe,G92 E0 ; zero the extruded length,G1 E3.5 ; feed filament back,,G92 E-1.0 ; zero the extruded length</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -152,10 +153,10 @@
   <celebrationSong>Random Song</celebrationSong>
   <createMB5G>0</createMB5G>
   <postProcessing></postProcessing>
-  <defaultSpeed>3000</defaultSpeed>
-  <outlineUnderspeed>0.8</outlineUnderspeed>
+  <defaultSpeed>2400</defaultSpeed>
+  <outlineUnderspeed>0.9</outlineUnderspeed>
   <solidInfillUnderspeed>1</solidInfillUnderspeed>
-  <supportUnderspeed>0.8</supportUnderspeed>
+  <supportUnderspeed>1</supportUnderspeed>
   <rapidXYspeed>9000</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
   <minBridgingArea>3</minBridgingArea>
@@ -171,7 +172,7 @@
   <maxPrintHeight>0</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
-  <robustSlicing>1</robustSlicing>
+  <robustSlicing>0</robustSlicing>
   <mergeAllIntoSolid>0</mergeAllIntoSolid>
   <onlyRetractWhenCrossingOutline>1</onlyRetractWhenCrossingOutline>
   <retractBetweenLayers>0</retractBetweenLayers>
