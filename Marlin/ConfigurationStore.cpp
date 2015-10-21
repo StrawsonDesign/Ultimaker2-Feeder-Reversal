@@ -237,6 +237,12 @@ void Config_RetrieveSettings()
         EEPROM_READ_VAR(i,add_homeing);
     }
     Config_PrintSettings();
+    
+     //ignore EEPROM extruder steps/mm and current
+    float temp1[]=DEFAULT_AXIS_STEPS_PER_UNIT;
+    axis_steps_per_unit[3]=temp1[3]; //overide EEPROM steps
+    float temp2[]=DEFAULT_PWM_MOTOR_CURRENT;
+    motor_current_setting[2] = temp2[2]; // overide EEPROM current
 }
 #endif
 
